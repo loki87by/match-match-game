@@ -350,11 +350,11 @@ template {
 
 @font-face {
   font-family: 'Roboto';
-  src: url(assets/59d18e163bfcd0607572.woff) format('woff');
+  src: url(/match-match-game/assets/59d18e163bfcd0607572.woff) format('woff');
   font-family: 'Roboto';
-  src: url(assets/31affea0add82d57c782.woff) format('woff');
+  src: url(/match-match-game/assets/31affea0add82d57c782.woff) format('woff');
   font-family: 'Roboto';
-  src: url(assets/5673e7a07239f4785325.woff) format('woff');
+  src: url(/match-match-game/assets/5673e7a07239f4785325.woff) format('woff');
 }
 html {
   font-family: 'Roboto', sans-serif;
@@ -668,11 +668,11 @@ h2 {
   transition: linear 1.5s;
 }
 .main__game-card_success {
-  filter: url(assets/235c77340582b8d4bcf8.svg#f0);
+  filter: url(/match-match-game/assets/235c77340582b8d4bcf8.svg#f0);
   transition: ease-in .3s;
 }
 .main__game-card_failure {
-  filter: url(assets/0bd5730623dec5e26f9d.svg#f0);
+  filter: url(/match-match-game/assets/0bd5730623dec5e26f9d.svg#f0);
   transition: ease-in .3s;
 }
 .not-found {
