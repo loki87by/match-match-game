@@ -8,7 +8,6 @@
     "prettier": "prettier",
     "build": "rimraf dist && webpack",
     "dev": "webpack serve --mode=development --progress",
-    "predeploy": "gh-pages -d dist",
     "deploy": "npm run build"
   },
   "repository": {
