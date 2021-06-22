@@ -119,11 +119,12 @@ header {
 }
 main {
   max-width: 100vw;
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 194px);
   padding: 33px 220px;
   margin: auto;
   display: flex;
   flex-direction: row;
+  overflow: auto;
 }
 h2 {
   padding: 20px;
@@ -339,17 +340,19 @@ h2 {
   color: #000;
 }
 footer {
-  height: 36px;
+  height: 64px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
   font-weight: 900;
   color: #b6bfc7;
 }
 .footer__copirights {
-  margin: -1vh 0 auto;
+  margin: 0;
   font-size: 1.5rem;
+  line-height: 1;
 }
 .footer__img {
   width: 30px;
@@ -358,7 +361,7 @@ footer {
   margin: 0 1vw;
 }
 .footer__date {
-  margin: auto 0 0;
+  margin: 0;
   font-size: 1rem;
 }
 .popup {
@@ -551,4 +554,106 @@ footer {
   height: 80vw;
   background-color: #fff;
   color: rgb(247, 107, 107);
+}
+
+@media (max-width: 1415px) {
+  .main__container_about {
+    padding: 8px 36px 85px 16px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1240px) {
+  main {
+    padding: 33px;
+  }
+  .main__container_about {
+    padding: 8px 36px 85px 16px;
+    margin: auto;
+  }
+  .main__container_game {
+    padding: 15px 305px;
+  }
+}
+
+@media (max-width: 980px) {
+  .popup__container {
+    width: 50vw;
+  }
+  .main__container_game {
+    padding: 15px 255px;
+  }
+  .main__game-timer {
+    width: calc(100% - 10px);
+    height: 24px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 855px) {
+  .main__about-rule {
+    height: max-content;
+  }
+  .main__about-rule-image_popup {
+    height: fit-content;
+    max-width: 40%;
+    padding-bottom: 0;
+  }
+  .main__about-rule-image_game {
+    height: fit-content;
+    max-width: 40%;
+  }
+  .main__container_game {
+    padding: 15px 205px;
+  }
+  .popup__form-list-item {
+    padding-left: 0;
+    height: 46px;
+    margin-bottom: 10px;
+  }
+  .popup__form-list-input {
+    margin-top: 0;
+  }
+  .popup__form-avatar {
+    margin: 42px 2%;
+  }
+  .popup__form-list-label {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 785px) {
+  header {
+    justify-content: space-around;
+  }
+  .header__logo {
+    margin-left: 1vmin;
+  }
+  .header__logo-text {
+    padding: 1px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 695px) {
+  .header__logo {
+    visibility: hidden;
+  }
+  .header__user-block {
+    padding-right: 0;
+  }
+  .header__user-block-btn {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header__user-block {
+    min-width: 0;
+    width: 16%;
+  }
+  .header__user-block-btn {
+    white-space: break-spaces;
+  }
 }
