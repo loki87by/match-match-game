@@ -67,7 +67,7 @@ class DBRequest {
       for (let i = 0; i < 10; i += 1) {
         topNotes.push(notes[i]);
       }
-      displayScores(topNotes);
+      displayScores(topNotes.filter((i) => i !== undefined));
     };
     req.onerror = (event: ErrorEvent) => {
       createErrorPopup(event);

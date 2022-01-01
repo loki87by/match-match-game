@@ -8,7 +8,7 @@ import { mainMarkup, formElement } from './consts/staticMarkup';
 import routes from './consts/constants';
 import ErrorComponent from './consts/errorPageMarkup';
 import Game from './components/Game';
-import dbr from './components/DBRequests';
+import DBRequest from './components/DBRequests';
 import { MarkupElement, UserData } from './consts/types';
 
 interface GameInterface extends Game {}
@@ -34,7 +34,7 @@ let isLoggedIn = false;
 let gameProgress = 'none';
 let gamePlay: GameInterface;
 
-dbr.initial();
+DBRequest.initial();
 
 function validation() {
   const valid = new FormValidator(formElement, form);
@@ -163,7 +163,7 @@ class App {
       this.settingsFuncs();
     }
     if (markupElement?.id === 'score') {
-      dbr.getAndDisplayScores();
+      DBRequest.getAndDisplayScores();
     }
     if (markupElement?.id === 'game') {
       startGame(gameDifficulty || 16, cardsImageType);
@@ -266,5 +266,5 @@ window.addEventListener('keyup', (evt: KeyboardEvent) => {
   user.last = inputs[1].value;
   user.email = inputs[2].value;
   user.timestamp = timestamp;
-  dbr.addUser(user, login);
+  DBRequest.addUser(user, login);
 });

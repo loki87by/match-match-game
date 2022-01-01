@@ -100,8 +100,10 @@ function convertSeconds(time: number, container: HTMLElement) {
 function gameGrid(difficulty: number, container: HTMLElement) {
   const rows = Math.floor(Math.sqrt(difficulty));
   const columns = difficulty / rows;
-  const templateColumnsValue = `repeat(${columns}, 1fr)`;
-  const templateRowsValue = `repeat(${rows}, 1fr)`;
+  const verticalShift = (columns - 1) * 2;
+  const horizontalShift = (columns - 1) * 2;
+  const templateColumnsValue = `repeat(${columns}, ${(100 - verticalShift) / columns}%)`;
+  const templateRowsValue = `repeat(${rows}, ${(100 - horizontalShift) / rows}%)`;
   container.setAttribute(
     'style',
     `grid-template-columns: ${templateColumnsValue}; grid-template-rows: ${templateRowsValue}`,

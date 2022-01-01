@@ -152,9 +152,9 @@ export default class Game {
   load(): void {
     const cards = this.preload();
     const container = document.querySelector('.main__game-cards-container') as HTMLElement;
-    if (this.difficulty > 16) {
-      gameGrid(this.difficulty, container);
-    }
+    // if (this.difficulty > 16) {
+    gameGrid(this.difficulty, container);
+    // }
     cards.forEach((item: Card) => {
       cardCreate(item, this.front, container);
     });
