@@ -4,6 +4,7 @@
 
 * TypeScript
 * IndexedDB
+* WebPack
 * Семантические теги
 * Адаптивная вёрстка
 * Flex-контейнеры
